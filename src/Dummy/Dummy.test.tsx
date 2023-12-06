@@ -4,7 +4,7 @@ import { server } from "../mocks/server";
 import { HttpResponse, delay, http } from "msw";
 
 describe("Dummy", () => {
-  it.only("should display product title", async () => {
+  it("should display product title", async () => {
     render(<Dummy />);
 
     await screen.findByText(/My mocked product/);

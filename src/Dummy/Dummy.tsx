@@ -17,7 +17,6 @@ export const Dummy = () => {
     setIsLoading(true);
     fetchUsers()
       .then((data) => {
-        console.log("DATA : ", data);
         setProduct(data);
       })
       .catch(() => setError(true))
