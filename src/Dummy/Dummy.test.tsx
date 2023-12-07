@@ -7,7 +7,8 @@ describe("Dummy", () => {
   it("should display product title", async () => {
     render(<Dummy />);
 
-    await screen.findByText(/My mocked product/);
+    expect(await screen.findByText(/My mocked product/)).toBeVisible();
+    expect(await screen.findByText(/Product id: 1/)).toBeVisible();
   });
 
   it("should display error", async () => {
